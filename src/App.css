@@ -44,3 +44,7 @@ img {
   /* Uses either 'none' or 'contain' to produce the smallest image size */
   object-fit: scale-down;
 }
+
+body{
+  background-color:rgb(124, 180, 237);
+}

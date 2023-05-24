@@ -8,35 +8,64 @@ const WeiYing = () => {
     sect: '',
     weapon: [],
     picture: '',
+    color:''
 
 
   })
   useEffect(() => {
-    axios.get('https://mdzs-api.fly.dev/characters/644fffc6ad59705a8ee36956')
+    axios.get('https://mdzs-api.fly.dev/characters')
       .then(res => {
         console.log('Response from main API: ', res)
         console.log('Wei Ying Data: ', res.data)
-        // let index = Math.floor(Math.random()* res.data.length)
-        let WeiYingData = res.data;
-        
+        let index = Math.floor(Math.random()* res.data.length)
+        let WeiYingData = res.data[index];
+        let color = "purple";
+        if(WeiYingData.sect==="Gusu Lan"){
+            color = "rgb(185, 205, 230)"
+        }
+        else if(WeiYingData.sect==="Qishan Wen"){
+            color = "rgb(232, 151, 161)"
+        }
+        else if(WeiYingData.sect==="Lanling Jin"){
+            color = "rgb(242, 220, 165)"
+        }
+        else if(WeiYingData.sect==="Qinghe Nie"){
+            color = "rgb(70, 93, 107)"
+        }
+        else if(WeiYingData.sect==="Yunmeng Jiang"){
+            color = "rgb(203, 192, 232)"
+        }
+        else{
+            color = "rgb(192,192,192)"
+        }
+        console.log(color);
+        document.body.style.backgroundColor = color
+
         
         setData({ birthName: WeiYingData.birthName, 
             courtesyName: WeiYingData.courtesyName, 
             title: WeiYingData.title, 
-          allies: WeiYingData.allies, 
-          sect: WeiYingData.sect, 
-          weapon: WeiYingData.weapon,
-          picture: WeiYingData.picture
+            allies: WeiYingData.allies, 
+            sect: WeiYingData.sect, 
+             weapon: WeiYingData.weapon,
+             picture: WeiYingData.picture,
+             color: color
          })
       })
       .catch(err => {
         console.log(err);
       })
   }, [])
+
+  let color = "purple";
+  if(Data.sect==="Gusu Lan"){
+    color = "rgb(124, 180, 237)"
+  }
  
   return (
 
-    <div>
+    <div style={{backgroundColor:Data.color}}>
+        {/* <style>{'body { background-color: {Data.color}; }'}</style> */}
       <h1> Birth Name: {Data.birthName}</h1>
       <h1> Courtesy Name: {Data.courtesyName}</h1>
       <h1> Title: {Data.title}</h1>
