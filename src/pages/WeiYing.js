@@ -8,7 +8,7 @@ const WeiYing = () => {
     sect: '',
     weapon: [],
     picture: '',
-    color:''
+    alt:''
 
 
   })
@@ -40,7 +40,10 @@ const WeiYing = () => {
         }
         console.log(color);
         document.body.style.backgroundColor = color
-
+        let name = WeiYingData.birthName;
+        if(WeiYingData.birthName===""){
+          name = WeiYingData.courtesyName;
+        }
         
         setData({ birthName: WeiYingData.birthName, 
             courtesyName: WeiYingData.courtesyName, 
@@ -49,7 +52,7 @@ const WeiYing = () => {
             sect: WeiYingData.sect, 
              weapon: WeiYingData.weapon,
              picture: WeiYingData.picture,
-             color: color
+             alt: name
          })
       })
       .catch(err => {
@@ -72,7 +75,7 @@ const WeiYing = () => {
       <h1> Sect: {Data.sect}</h1>
       <h1> Weapon: {Data.weapon}</h1>
 
-      <img src={Data.picture} alt={Data.birthName} class='scale-down'/>
+      <img src={Data.picture} alt={Data.alt} class='scale-down'/>
 
       
 
