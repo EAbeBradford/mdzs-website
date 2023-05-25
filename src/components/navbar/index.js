@@ -18,10 +18,10 @@ const Navbar = () => {
                     <NavLink to="/" activeStyle>
                         Random Char
                     </NavLink>
-                    {/* <NavLink to="/waterTribe" activeStyle>
-                        Water Tribe Charater (Random)
+                     <NavLink to="/Gusu" activeStyle>
+                        Gusu Lan Charater (Random)
                     </NavLink>
-                    <NavLink to="/fireNation" activeStyle>
+                    {/*<NavLink to="/fireNation" activeStyle>
                         Fire Nation Charater (Random)
                     </NavLink>
                     <NavLink to="/earthKingdom" activeStyle>

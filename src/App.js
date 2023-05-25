@@ -4,7 +4,8 @@ import Navbar from './components/navbar';
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
 
-import WeiYing from './pages/WeiYing';
+import Random from './pages/Random';
+import Gusu from './pages/gusu';
 // import WaterTribe from './pages/waterTribe';
 // import FireNation from './pages/fireNation';
 // import AirNomads from './pages/airNomads';
@@ -17,9 +18,9 @@ return (
     <Router>
     <Navbar />
     <Routes>
-        <Route path='/' element={<WeiYing />} />
-        {/* <Route path='/waterTribe' element={<WaterTribe/>} />
-        <Route path='/fireNation' element={<FireNation/>} />
+        <Route path='/' element={<Random />} />
+       <Route path='/gusu' element={<Gusu/>} />
+         {/* <Route path='/fireNation' element={<FireNation/>} />
         <Route path='/earthKingdom' element={<EarthKingdom/>} />
         <Route path='/airNomads' element={<AirNomads/>} /> */}
     </Routes>
