@@ -27,6 +27,9 @@ const Navbar = () => {
                     <NavLink to="/jin" activeStyle>
                         Lanling Jin Charater (Random)
                     </NavLink>
+                    <NavLink to="/nie" activeStyle>
+                        Qinghe Nie Charater (Random)
+                    </NavLink>
                    
                     </ul>
                 </div>
