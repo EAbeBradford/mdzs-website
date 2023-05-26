@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
 
 import Random from './pages/Random';
-import Gusu from './pages/gusu';
+import Lan from './pages/lan';
+import Jiang from './pages/jiang';
 // import WaterTribe from './pages/waterTribe';
 // import FireNation from './pages/fireNation';
 // import AirNomads from './pages/airNomads';
@@ -19,7 +20,9 @@ return (
     <Navbar />
     <Routes>
         <Route path='/' element={<Random />} />
-       <Route path='/gusu' element={<Gusu/>} />
+       <Route path='/lan' element={<Lan/>} />
+       <Route path='/jiang' element={<Jiang/>} />
+
          {/* <Route path='/fireNation' element={<FireNation/>} />
         <Route path='/earthKingdom' element={<EarthKingdom/>} />
         <Route path='/airNomads' element={<AirNomads/>} /> */}
