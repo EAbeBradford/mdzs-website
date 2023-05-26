@@ -17,9 +17,10 @@ const Jin = () => {
       .then(res => {
         console.log('Response from main API: ', res)
         console.log('Jin Data: ', res.data)
-        let index = Math.floor(Math.random()* res.data.length)
-        let jinData = res.data[index];
-        
+       let index = Math.floor(Math.random()* res.data.length)
+       console.log(Math.random()* res.data.length);
+       let jinData = res.data[index];
+
         
         document.body.style.backgroundColor = "rgb(242, 220, 165)"
         let name = jinData.birthName;
