@@ -8,6 +8,7 @@ const Jiang = () => {
     sect: '',
     weapon: [],
     picture: '',
+    desc: "",
     alt:''
 
 
@@ -34,6 +35,7 @@ const Jiang = () => {
             sect: jiangData.sect, 
              weapon: jiangData.weapon,
              picture: jiangData.picture,
+             desc: jiangData.description,
              alt: name
          })
       })
@@ -49,19 +51,20 @@ const Jiang = () => {
       <h1> Birth Name: {Data.birthName}</h1>
       <h1> Courtesy Name: {Data.courtesyName}</h1>
       <h1> Title: {Data.title}</h1>
-      <h1> Sect: {Data.sect}</h1>
-      <h1>Weapon: </h1>
+      <h3> Sect: {Data.sect}</h3>
+      <h3>Weapon: </h3>
       <>
         {Data.weapon.map((d) => {
           return (
             <div className="container">
               <ul>
-                <h1>{d}</h1>
+                <p>{d}</p>
               </ul>
             </div>
           );
         })}
       </>
+      <p>{Data.desc}</p>
       <img src={Data.picture} alt={Data.alt} class="scale-down" />
     </div>
   );
