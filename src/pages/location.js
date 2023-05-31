@@ -51,7 +51,7 @@ const Location = () => {
   return (
     <div>
       {/* <style>{'body { background-color: {Data.color}; }'}</style> */}
-      <h1> Birth Name: {Data.name}</h1>
+      <h1> Name: {Data.name}</h1>
       <h2> Did it get destroyed? {Data.didItGetDestroyed? 'Yes': 'No'}</h2>
       <h3> Sect: {Data.sect}</h3>
       <p>{Data.desc}</p>
