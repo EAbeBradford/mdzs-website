@@ -50,7 +50,7 @@ const Gusu = () => {
       <h1> Courtesy Name: {Data.courtesyName}</h1>
       <h1> Title: {Data.title}</h1>
       <h1> Sect: {Data.sect}</h1>
-      <h1>Weapon: </h1>
+      <h1> Weapon: </h1>
       <>
         {Data.weapon.map((d) => {
           return (
@@ -65,6 +65,8 @@ const Gusu = () => {
       <img src={Data.picture} alt={Data.alt} class="scale-down" />
     </div>
   );
+
+  
 };
 
 export default Gusu;
