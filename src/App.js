@@ -5,11 +5,11 @@ import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
 
 import Random from './pages/Random';
-import Gusu from './pages/gusu';
-// import WaterTribe from './pages/waterTribe';
-// import FireNation from './pages/fireNation';
-// import AirNomads from './pages/airNomads';
-// import EarthKingdom from './pages/earthKingdom';
+import Lan from './pages/lan';
+import Jiang from './pages/jiang';
+import Jin from './pages/jin';
+import Nie from './pages/nie';
+import Wen from './pages/wen';
 
 // for multi page stuff : https://www.geeksforgeeks.org/how-to-create-a-multi-page-website-using-react-js/
   
@@ -19,10 +19,11 @@ return (
     <Navbar />
     <Routes>
         <Route path='/' element={<Random />} />
-       <Route path='/gusu' element={<Gusu/>} />
-         {/* <Route path='/fireNation' element={<FireNation/>} />
-        <Route path='/earthKingdom' element={<EarthKingdom/>} />
-        <Route path='/airNomads' element={<AirNomads/>} /> */}
+       <Route path='/lan' element={<Lan/>} />
+       <Route path='/jiang' element={<Jiang/>} />
+       <Route path='/jin' element={<Jin/>} />
+       <Route path='/nie' element={<Nie/>} />
+       <Route path='/wen' element={<Wen/>} />
     </Routes>
     </Router>
 );

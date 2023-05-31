@@ -18,18 +18,22 @@ const Navbar = () => {
                     <NavLink to="/" activeStyle>
                         Random Char
                     </NavLink>
-                     <NavLink to="/Gusu" activeStyle>
+                     <NavLink to="/lan" activeStyle>
                         Gusu Lan Charater (Random)
                     </NavLink>
-                    {/*<NavLink to="/fireNation" activeStyle>
-                        Fire Nation Charater (Random)
+                    <NavLink to="/jiang" activeStyle>
+                        Yunmeng Jiang Charater (Random)
                     </NavLink>
-                    <NavLink to="/earthKingdom" activeStyle>
-                        Earth Kingdom Charater (Random)
+                    <NavLink to="/jin" activeStyle>
+                        Lanling Jin Charater (Random)
                     </NavLink>
-                    <NavLink to="/airNomads" activeStyle>
-                        Air Nomads Charater (Random)
-                    </NavLink> */}
+                    <NavLink to="/nie" activeStyle>
+                        Qinghe Nie Charater (Random)
+                    </NavLink>
+                    <NavLink to="/wen" activeStyle>
+                        Qishan Wen Charater (Random)
+                    </NavLink>
+                   
                     </ul>
                 </div>
             </nav >

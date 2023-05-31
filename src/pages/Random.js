@@ -8,16 +8,18 @@ const Random = () => {
     sect: "",
     weapon: [],
     picture: "",
+    desc: "",
     alt: "",
   });
   useEffect(() => {
     axios
-      .get("https://mdzs-api.fly.dev/characters")
+      .get("https://mdzs-api.fly.dev/characters/")
       .then((res) => {
         console.log("Response from main API: ", res);
         console.log("Random Data: ", res.data);
         let index = Math.floor(Math.random() * res.data.length);
         let randomData = res.data[index];
+        //let randomData = res.data;
         let color = "purple";
         if (randomData.sect === "Gusu Lan") {
           color = "rgb(185, 205, 230)";
@@ -47,6 +49,7 @@ const Random = () => {
           sect: randomData.sect,
           weapon: randomData.weapon,
           picture: randomData.picture,
+          desc: randomData.description,
           alt: name,
         });
       })
@@ -61,19 +64,20 @@ const Random = () => {
       <h1> Birth Name: {Data.birthName}</h1>
       <h1> Courtesy Name: {Data.courtesyName}</h1>
       <h1> Title: {Data.title}</h1>
-      <h1> Sect: {Data.sect}</h1>
-      <h1>Weapon: </h1>
+      <h3> Sect: {Data.sect}</h3>
+      <h3>Weapon: </h3>
       <>
         {Data.weapon.map((d) => {
           return (
             <div className="container">
               <ul>
-                <h1>{d}</h1>
+                <p>{d}</p>
               </ul>
             </div>
           );
         })}
       </>
+      <p>{Data.desc}</p>
       <img src={Data.picture} alt={Data.alt} class="scale-down" />
     </div>
   );
