@@ -69,6 +69,8 @@ const Lan = () => {
       <img src={Data.picture} alt={Data.alt} class="scale-down" />
     </div>
   );
+
+  
 };
 
 export default Lan;
