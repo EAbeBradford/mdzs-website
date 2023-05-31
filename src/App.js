@@ -10,6 +10,7 @@ import Jiang from './pages/jiang';
 import Jin from './pages/jin';
 import Nie from './pages/nie';
 import Wen from './pages/wen';
+import Location from './pages/location'
 
 // for multi page stuff : https://www.geeksforgeeks.org/how-to-create-a-multi-page-website-using-react-js/
   
@@ -24,6 +25,8 @@ return (
        <Route path='/jin' element={<Jin/>} />
        <Route path='/nie' element={<Nie/>} />
        <Route path='/wen' element={<Wen/>} />
+       <Route path='/location' element={<Location/>} />
+
     </Routes>
     </Router>
 );

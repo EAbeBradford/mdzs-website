@@ -13,13 +13,13 @@ const Random = () => {
   });
   useEffect(() => {
     axios
-      .get("https://mdzs-api.fly.dev/characters/")
+      .get("https://mdzs-api.fly.dev/characters")
       .then((res) => {
         console.log("Response from main API: ", res);
-        console.log("Random Data: ", res.data);
+        console.log("Random Data: ", res.data[8]);
         let index = Math.floor(Math.random() * res.data.length);
         let randomData = res.data[index];
-        //let randomData = res.data;
+       // let randomData = res.data;
         let color = "purple";
         if (randomData.sect === "Gusu Lan") {
           color = "rgb(185, 205, 230)";
